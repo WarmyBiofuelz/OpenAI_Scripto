@@ -1,9 +1,8 @@
 import os
 from openai import OpenAI
-
 from dotenv import load_dotenv
 
-load_dotenv() # Load environment variables from .env file
+load_dotenv() # Loads Secret from .env file
 
 token = os.getenv("SECRET") # Replace with your actual token
 endpoint = "https://models.github.ai/inference"
@@ -22,7 +21,7 @@ response = client.chat.completions.create(
         },
         {
             "role": "user",
-            "content": "Tell me name of tallest man of the world?",
+            "content": "What is the capital of France?",
         }
     ],
     temperature=1.0,
